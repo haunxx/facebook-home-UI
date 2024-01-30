@@ -1,16 +1,15 @@
 import 'package:facebook/assets.dart';
 import 'package:facebook/widget/avatar.dart';
-import 'package:facebook/widget/divider.dart';
 import 'package:facebook/widget/verifiedTick.dart';
 import 'package:flutter/material.dart';
 
 class PostCard extends StatelessWidget {
-  String avatar;
-  String name;
-  String publishedTime;
-  String postTitle;
-  String postImage;
-  bool verfied;
+ final String avatar;
+ final String name;
+ final String publishedTime;
+ final String postTitle;
+ final String postImage;
+  final bool verfied;
 
   PostCard({
     required this.avatar,
@@ -69,7 +68,12 @@ class PostCard extends StatelessWidget {
                 SizedBox(width: 10),
                 displayText(label: "2.1k"),
                 SizedBox(width: 5),
-                displayText(label: "Shar"),
+                displayText(label: "Share"),
+                Avatar(
+                  displayImage: mammookka,
+                  dpSize: 20,
+                ),
+                IconButton(onPressed: () {}, icon: Icon(Icons.arrow_drop_down))
               ],
             ),
           ),

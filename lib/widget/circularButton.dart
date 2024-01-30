@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CircularButton extends StatelessWidget {
-  IconData buttonIcon;
-  void Function() buttonAction;
-  Color iconColor;
+ final IconData buttonIcon;
+  final void Function() buttonAction;
+  final Color iconColor;
 
   CircularButton(
       {required this.buttonIcon,
