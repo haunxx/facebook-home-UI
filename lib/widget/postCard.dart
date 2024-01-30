@@ -69,7 +69,7 @@ class PostCard extends StatelessWidget {
                 SizedBox(width: 10),
                 displayText(label: "2.1k"),
                 SizedBox(width: 5),
-                displayText(label: "Share"),
+                displayText(label: "Shar"),
               ],
             ),
           ),
