@@ -4,12 +4,15 @@ import 'package:facebook/widget/verifiedTick.dart';
 import 'package:flutter/material.dart';
 
 class PostCard extends StatelessWidget {
- final String avatar;
- final String name;
- final String publishedTime;
- final String postTitle;
- final String postImage;
+  final String avatar;
+  final String name;
+  final String publishedTime;
+  final String postTitle;
+  final String postImage;
   final bool verfied;
+  final String likeCount;
+  final String commentCount;
+  final String shareCount;
 
   PostCard({
     required this.avatar,
@@ -18,6 +21,9 @@ class PostCard extends StatelessWidget {
     required this.postTitle,
     required this.postImage,
     this.verfied = false,
+    required this.likeCount,
+    required this.commentCount,
+    required this.shareCount,
   });
   @override
   Widget build(BuildContext context) {
@@ -53,24 +59,24 @@ class PostCard extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  width: 5,
+                  width: 10,
                 ),
-                displayText(label: "368k")
+                displayText(label: likeCount)
               ],
             ),
           ),
           Container(
             child: Row(
               children: [
-                displayText(label: "12.4k"),
+                displayText(label: commentCount),
                 SizedBox(width: 5),
                 displayText(label: "Comments"),
                 SizedBox(width: 10),
-                displayText(label: "2.1k"),
+                displayText(label: shareCount),
                 SizedBox(width: 5),
                 displayText(label: "Share"),
                 Avatar(
-                  displayImage: mammookka,
+                  displayImage: avatar,
                   dpSize: 20,
                 ),
                 IconButton(onPressed: () {}, icon: Icon(Icons.arrow_drop_down))

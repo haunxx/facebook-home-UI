@@ -1,6 +1,16 @@
 import 'package:flutter/material.dart';
 
-class HeaderButtonSection extends StatelessWidget {
+class ButtonSection extends StatelessWidget {
+  Widget buttonOne;
+  Widget buttonTwo;
+  Widget buttonThree;
+
+  ButtonSection({
+    required this.buttonOne,
+    required this.buttonTwo,
+    required this.buttonThree,
+  });
+
   Widget headerButton(
       {required String printText,
       required IconData buttonIcon,
@@ -25,29 +35,17 @@ class HeaderButtonSection extends StatelessWidget {
     return Container(
       height: 40,
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-        headerButton(
-            printText: "Go Live!",
-            buttonIcon: Icons.video_call,
-            labelText: "Live",
-            iconColor: Colors.red.shade400),
+        buttonOne,
         VerticalDivider(
           thickness: 1,
           color: Colors.grey.shade300,
         ),
-        headerButton(
-            printText: "Go to Album",
-            buttonIcon: Icons.photo_library,
-            labelText: "Photos",
-            iconColor: Colors.green.shade400),
+        buttonTwo,
         VerticalDivider(
           thickness: 1,
           color: Colors.grey.shade300,
         ),
-        headerButton(
-            printText: "Go Romm",
-            buttonIcon: Icons.video_call,
-            labelText: "Room",
-            iconColor: Colors.purple.shade400),
+        buttonThree,
       ]),
     );
   }
