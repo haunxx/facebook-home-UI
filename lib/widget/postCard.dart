@@ -1,5 +1,8 @@
 import 'package:facebook/assets.dart';
+import 'package:facebook/section/ButtonSection.dart';
 import 'package:facebook/widget/avatar.dart';
+import 'package:facebook/widget/button.dart';
+import 'package:facebook/widget/divider.dart';
 import 'package:facebook/widget/verifiedTick.dart';
 import 'package:flutter/material.dart';
 
@@ -33,6 +36,24 @@ class PostCard extends StatelessWidget {
         titleSection(),
         imageSection(),
         footerSection(),
+        lightDivider,
+        ButtonSection(
+          buttonOne: button(
+              printText: "Liked!",
+              buttonIcon: Icons.thumb_up_outlined,
+              labelText: "Like",
+              iconColor: Colors.grey.shade500),
+          buttonTwo: button(
+              printText: "Comment!",
+              buttonIcon: Icons.comment_outlined,
+              labelText: "Comment",
+              iconColor: Colors.grey.shade500),
+          buttonThree: button(
+              printText: "Shared!",
+              buttonIcon: Icons.share_outlined,
+              labelText: "Share",
+              iconColor: Colors.grey.shade500),
+        )
       ]),
     );
   }
@@ -40,7 +61,7 @@ class PostCard extends StatelessWidget {
   Widget footerSection() {
     return Container(
       padding: EdgeInsets.only(left: 10, right: 10),
-      height: 50,
+      height: 45,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -105,7 +126,7 @@ class PostCard extends StatelessWidget {
   Widget titleSection() {
     return Container(
       alignment: Alignment.centerLeft,
-      padding: EdgeInsets.only(bottom: 5, left: 5),
+      padding: EdgeInsets.only(bottom: 5, left: 15),
       child: Text(
         postTitle == null ? "" : postTitle,
         style: TextStyle(fontSize: 17),
@@ -120,7 +141,7 @@ class PostCard extends StatelessWidget {
         children: [
           Text(
             name,
-            style: TextStyle(fontWeight: FontWeight.w400),
+            style: TextStyle(fontWeight: FontWeight.w500),
           ),
           SizedBox(
             width: 8,

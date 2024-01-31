@@ -1,5 +1,5 @@
 import 'package:facebook/assets.dart';
-import 'package:facebook/section/headerButtonSection.dart';
+import 'package:facebook/section/ButtonSection.dart';
 import 'package:facebook/section/roomSection.dart';
 import 'package:facebook/section/statusSection.dart';
 import 'package:facebook/section/storySection.dart';
@@ -75,7 +75,40 @@ class Home extends StatelessWidget {
               likeCount: "463k",
               commentCount: "13.7k",
               shareCount: "2.1k",
-            )
+            ),
+            thickDivider,
+            PostCard(
+                avatar: prithvi,
+                verfied: true,
+                name: "Prithviraj Sukumaran",
+                publishedTime: "12h",
+                postTitle: "Cooking Empuran",
+                postImage: prithvipost,
+                likeCount: "324k",
+                commentCount: "21.5k",
+                shareCount: "3.1k"),
+            thickDivider,
+            PostCard(
+                avatar: alia,
+                verfied: true,
+                name: "Aliabhatt",
+                publishedTime: "2h",
+                postTitle: "Working my Ass out ;)",
+                postImage: aliapost,
+                likeCount: "98k",
+                commentCount: "4.6",
+                shareCount: "5.1k"),
+            thickDivider,
+            PostCard(
+                avatar: priyadarshan,
+                verfied: true,
+                name: "Priyadarshan",
+                publishedTime: "1day",
+                postTitle: "Soon",
+                postImage: priyadarshanpost,
+                likeCount: "12k",
+                commentCount: "1.5k",
+                shareCount: "364")
           ],
         ),
       ),
