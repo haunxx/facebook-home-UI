@@ -3,6 +3,7 @@ import 'package:facebook/section/ButtonSection.dart';
 import 'package:facebook/section/roomSection.dart';
 import 'package:facebook/section/statusSection.dart';
 import 'package:facebook/section/storySection.dart';
+import 'package:facebook/section/suggestionSection.dart';
 import 'package:facebook/widget/divider.dart';
 import 'package:facebook/widget/button.dart';
 import 'package:facebook/widget/postCard.dart';
@@ -87,6 +88,8 @@ class Home extends StatelessWidget {
                 likeCount: "324k",
                 commentCount: "21.5k",
                 shareCount: "3.1k"),
+            thickDivider,
+            SuggestionSection(),
             thickDivider,
             PostCard(
                 avatar: alia,
